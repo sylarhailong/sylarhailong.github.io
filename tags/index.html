@@ -96,12 +96,13 @@
 
 <meta name="description" content="己所不欲，勿施于人">
 <meta property="og:type" content="website">
-<meta property="og:title" content="越老越糊涂">
-<meta property="og:url" content="http://yoursite.com/index.html">
+<meta property="og:title" content="tags">
+<meta property="og:url" content="http://yoursite.com/tags/index.html">
 <meta property="og:site_name" content="越老越糊涂">
 <meta property="og:description" content="己所不欲，勿施于人">
+<meta property="og:updated_time" content="2017-08-12T23:31:02.000Z">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:title" content="越老越糊涂">
+<meta name="twitter:title" content="tags">
 <meta name="twitter:description" content="己所不欲，勿施于人">
 
 
@@ -131,13 +132,13 @@
 
 
 
-  <link rel="canonical" href="http://yoursite.com/"/>
+  <link rel="canonical" href="http://yoursite.com/tags/"/>
 
 
 
 
 
-  <title>越老越糊涂</title>
+  <title>tags | 越老越糊涂</title>
   
 
 
@@ -156,9 +157,7 @@
     
   
 
-  <div class="container sidebar-position-left 
-   page-home 
- ">
+  <div class="container sidebar-position-left page-post-detail ">
     <div class="headband"></div>
 
     <header id="header" class="header" itemscope itemtype="http://schema.org/WPHeader">
@@ -285,156 +284,44 @@
         <div class="content-wrap">
           <div id="content" class="content">
             
-  <section id="posts" class="posts-expand">
+
+  <div id="posts" class="posts-expand">
     
-      
-
-  
-
-  
-  
-  
-
-  <article class="post post-type-normal" itemscope itemtype="http://schema.org/Article">
-  
-  
-  
-  <div class="post-block">
-    <link itemprop="mainEntityOfPage" href="http://yoursite.com/2017/08/12/window下nodejs版本管理/">
-
-    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
-      <meta itemprop="name" content="sylarhailong">
-      <meta itemprop="description" content="">
-      <meta itemprop="image" content="/images/avatar.gif">
-    </span>
-
-    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
-      <meta itemprop="name" content="越老越糊涂">
-    </span>
-
     
+    
+    <div class="post-block page">
       <header class="post-header">
 
-        
-        
-          <h1 class="post-title" itemprop="name headline">
-                
-                <a class="post-title-link" href="/2017/08/12/window下nodejs版本管理/" itemprop="url">windows环境nodejs版本管理</a></h1>
-        
+	<h1 class="post-title" itemprop="name headline">tags</h1>
 
-        <div class="post-meta">
-          <span class="post-time">
-            
-              <span class="post-meta-item-icon">
-                <i class="fa fa-calendar-o"></i>
-              </span>
-              
-                <span class="post-meta-item-text">发表于</span>
-              
-              <time title="创建于" itemprop="dateCreated datePublished" datetime="2017-08-12T00:00:00+08:00">
-                2017-08-12
-              </time>
-            
 
-            
 
-            
-          </span>
-
-          
-            <span class="post-category" >
-            
-              <span class="post-meta-divider">|</span>
-            
-              <span class="post-meta-item-icon">
-                <i class="fa fa-folder-o"></i>
-              </span>
-              
-                <span class="post-meta-item-text">分类于</span>
-              
-              
-                <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
-                  <a href="/categories/nodejs/" itemprop="url" rel="index">
-                    <span itemprop="name">nodejs</span>
-                  </a>
-                </span>
-
-                
-                
-              
-            </span>
-          
-
-          
-            
-          
-
-          
-          
-
-          
-
-          
-
-          
-
-        </div>
-      </header>
-    
-
-    
-    
-    
-    <div class="post-body" itemprop="articleBody">
+</header>
 
       
       
-
       
+      <div class="post-body">
         
-          
-            <p>由于业务需要使用nodejs，由于nodejs版本更新频繁，为方便使用通过安装nodejs版本管理器来解决这个问题，<br>实验了两种方案，踩过一点小坑，记录一下</p>
-<h2 id="nvmw方案"><a href="#nvmw方案" class="headerlink" title="nvmw方案"></a><a href="https://fengmk2.com/blog/2014/03/node-env-and-faster-npm.html" target="_blank" rel="external">nvmw方案</a></h2><p>nvmw方案是cnode社区上给出的nodejs版本管理方案，尝试按照提示步骤进行，期间遇到了几个问题<br><figure class="highlight bash"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">nvmw install v6.11.2</div></pre></td></tr></table></figure></p>
-<p>提示“没有文件扩展”.js”的脚本引擎”<br>这样的错误,原因是因为JS扩展名的文件被其他软件关联了，需要取消关联。<br>采用的解决方案是：<br>在运行中输入“regedit”进入注册表，<br>把[HKEY_CLASSES_ROOT.js]项下的那个默认值改成”JSFile”就可以正常运行JS 文件了。<br>解决了这个问题之后重新执行命令，又出现新的错误cscript不是内部或外部命令,未找到合适的解决方案，因此寻找新的方案。<br>有成功的例子详见<a href="http://blog.csdn.net/duanyachao/article/details/51822015" target="_blank" rel="external">这篇文章</a></p>
-<h2 id="nvm-windows方案"><a href="#nvm-windows方案" class="headerlink" title="nvm-windows方案"></a><a href="https://github.com/coreybutler/nvm-windows" target="_blank" rel="external">nvm-windows方案</a></h2><p>此方案比较简单，按照说明安装软件即可，顺利达到目的<br>中间过程中踩了一个坑，在nvm use的命令的时候失效，原因是软件我安装在programe file下了，路径中存在空格，<br>重新安装软件在全英文路径下，安装成功。建议安装路径不要又空格和中文。</p>
-
-          
         
+          <div class="tag-cloud">
+            <div class="tag-cloud-title">
+                目前共计 1 个标签
+            </div>
+            <div class="tag-cloud-tags">
+              <a href="/tags/nodejs/" style="font-size: 12px; color: #ccc">nodejs</a>
+            </div>
+          </div>
+        
+      </div>
+      
+      
       
     </div>
     
     
     
-
-    
-
-    
-
-    
-
-    <footer class="post-footer">
-      
-
-      
-
-      
-
-      
-      
-        <div class="post-eof"></div>
-      
-    </footer>
   </div>
-  
-  
-  
-  </article>
-
-
-    
-  </section>
-
-  
 
 
           </div>
@@ -442,6 +329,10 @@
 
 
           
+  <div class="comments" id="comments">
+    
+  </div>
+
 
         </div>
         
