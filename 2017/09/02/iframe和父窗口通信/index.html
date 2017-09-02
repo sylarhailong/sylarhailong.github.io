@@ -78,7 +78,7 @@
 <link href="/css/main.css?v=5.1.2" rel="stylesheet" type="text/css" />
 
 
-  <meta name="keywords" content="Hexo, NexT" />
+  <meta name="keywords" content="js," />
 
 
 
@@ -94,15 +94,17 @@
 
 
 
-<meta name="description" content="己所不欲，勿施于人">
-<meta property="og:type" content="website">
-<meta property="og:title" content="越老越糊涂">
-<meta property="og:url" content="http://yoursite.com/tags/nginx-conf/index.html">
+<meta name="description" content="之前做过一个需求，合作方要求以iframe的形式将我们的页面嵌入到他们的页面中，就涉及到了iframe和父窗口的通信，一般需要通信的内容就是发送高度，对方接受到信息后设置iframe的高度，保证iframe正常显示，不会遮挡内容也不会出现滚动条。 实现方案 window.postMessage() 方法可以安全地实现跨源通信。通常，对于两个不同页面的脚本，只有当执行它们的页面位于具有相同的协议（通">
+<meta name="keywords" content="js">
+<meta property="og:type" content="article">
+<meta property="og:title" content="iframe和父窗口通信">
+<meta property="og:url" content="http://yoursite.com/2017/09/02/iframe和父窗口通信/index.html">
 <meta property="og:site_name" content="越老越糊涂">
-<meta property="og:description" content="己所不欲，勿施于人">
+<meta property="og:description" content="之前做过一个需求，合作方要求以iframe的形式将我们的页面嵌入到他们的页面中，就涉及到了iframe和父窗口的通信，一般需要通信的内容就是发送高度，对方接受到信息后设置iframe的高度，保证iframe正常显示，不会遮挡内容也不会出现滚动条。 实现方案 window.postMessage() 方法可以安全地实现跨源通信。通常，对于两个不同页面的脚本，只有当执行它们的页面位于具有相同的协议（通">
+<meta property="og:updated_time" content="2017-09-02T10:34:06.000Z">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:title" content="越老越糊涂">
-<meta name="twitter:description" content="己所不欲，勿施于人">
+<meta name="twitter:title" content="iframe和父窗口通信">
+<meta name="twitter:description" content="之前做过一个需求，合作方要求以iframe的形式将我们的页面嵌入到他们的页面中，就涉及到了iframe和父窗口的通信，一般需要通信的内容就是发送高度，对方接受到信息后设置iframe的高度，保证iframe正常显示，不会遮挡内容也不会出现滚动条。 实现方案 window.postMessage() 方法可以安全地实现跨源通信。通常，对于两个不同页面的脚本，只有当执行它们的页面位于具有相同的协议（通">
 
 
 
@@ -131,13 +133,13 @@
 
 
 
-  <link rel="canonical" href="http://yoursite.com/tags/nginx-conf/"/>
+  <link rel="canonical" href="http://yoursite.com/2017/09/02/iframe和父窗口通信/"/>
 
 
 
 
 
-  <title>标签: nginx.conf | 越老越糊涂</title>
+  <title>iframe和父窗口通信 | 越老越糊涂</title>
   
 
 
@@ -165,7 +167,7 @@
     
   
 
-  <div class="container sidebar-position-left  ">
+  <div class="container sidebar-position-left page-post-detail ">
     <div class="headband"></div>
 
     <header id="header" class="header" itemscope itemtype="http://schema.org/WPHeader">
@@ -293,54 +295,196 @@
           <div id="content" class="content">
             
 
-  
-  
-  
-  <div class="post-block tag">
+  <div id="posts" class="posts-expand">
+    
 
-    <div id="posts" class="posts-collapse">
-      <div class="collection-title">
-        <h1>nginx.conf<small>标签</small>
-        </h1>
-      </div>
+  
 
-      
-        
+  
+  
+  
 
   <article class="post post-type-normal" itemscope itemtype="http://schema.org/Article">
-    <header class="post-header">
+  
+  
+  
+  <div class="post-block">
+    <link itemprop="mainEntityOfPage" href="http://yoursite.com/2017/09/02/iframe和父窗口通信/">
 
-      <h2 class="post-title">
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="name" content="sylarhailong">
+      <meta itemprop="description" content="">
+      <meta itemprop="image" content="/images/avatar.gif">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="越老越糊涂">
+    </span>
+
+    
+      <header class="post-header">
+
         
-            <a class="post-title-link" href="/2017/08/17/nginx配置详解/" itemprop="url">
-              
-                <span itemprop="name">nginx配置详解</span>
-              
-            </a>
         
-      </h2>
+          <h1 class="post-title" itemprop="name headline">iframe和父窗口通信</h1>
+        
 
-      <div class="post-meta">
-        <time class="post-time" itemprop="dateCreated"
-              datetime="2017-08-17T20:15:54+08:00"
-              content="2017-08-17" >
-          08-17
-        </time>
-      </div>
+        <div class="post-meta">
+          <span class="post-time">
+            
+              <span class="post-meta-item-icon">
+                <i class="fa fa-calendar-o"></i>
+              </span>
+              
+                <span class="post-meta-item-text">发表于</span>
+              
+              <time title="创建于" itemprop="dateCreated datePublished" datetime="2017-09-02T16:28:52+08:00">
+                2017-09-02
+              </time>
+            
 
-    </header>
-  </article>
+            
 
+            
+          </span>
+
+          
+            <span class="post-category" >
+            
+              <span class="post-meta-divider">|</span>
+            
+              <span class="post-meta-item-icon">
+                <i class="fa fa-folder-o"></i>
+              </span>
+              
+                <span class="post-meta-item-text">分类于</span>
+              
+              
+                <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
+                  <a href="/categories/js/" itemprop="url" rel="index">
+                    <span itemprop="name">js</span>
+                  </a>
+                </span>
+
+                
+                
+              
+            </span>
+          
+
+          
+            
+          
+
+          
+          
+
+          
+
+          
+
+          
+
+        </div>
+      </header>
+    
+
+    
+    
+    
+    <div class="post-body" itemprop="articleBody">
+
+      
+      
+
+      
+        <p>之前做过一个需求，合作方要求以iframe的形式将我们的页面嵌入到他们的页面中，就涉及到了iframe和父窗口的通信，一般需要通信的内容就是发送高度，对方接受到信息后设置iframe的高度，保证iframe正常显示，不会遮挡内容也不会出现滚动条。</p>
+<h3 id="实现方案"><a href="#实现方案" class="headerlink" title="实现方案"></a>实现方案</h3><blockquote>
+<p>window.postMessage() 方法可以安全地实现跨源通信。通常，对于两个不同页面的脚本，只有当执行它们的页面位于具有相同的协议（通常为https），端口号（443为https的默认值），以及主机  (两个页面的模数 Document.domain设置为相同的值) 时，这两个脚本才能相互通信。window.postMessage() 方法提供了一种受控机制来规避此限制，只要正确的使用，这种方法就很安全</p>
+</blockquote>
+<h3 id="语法介绍"><a href="#语法介绍" class="headerlink" title="语法介绍"></a>语法介绍</h3><h4 id="iframe内使用postMessage"><a href="#iframe内使用postMessage" class="headerlink" title="iframe内使用postMessage"></a>iframe内使用postMessage</h4><blockquote>
+<p>postMessage(message, targetOrigin, [transfer]);</p>
+</blockquote>
+<p><strong>message</strong></p>
+<p>将要发送到其他 window的数据。它将会被结构化克隆算法序列化。这意味着你可以不受什么限制的将数据对象安全的传送给目标窗口而无需自己序列化。</p>
+<p><strong>targetOrigin</strong></p>
+<p>通过窗口的origin属性来指定哪些窗口能接收到消息事件，其值可以是字符串”*“（表示无限制）或者一个URI。在发送消息的时候，如果目标窗口的协议、主机地址或端口这三者的任意一项不匹配targetOrigin提供的值，那么消息就不会被发送；只有三者完全匹配，消息才会被发送。这个机制用来控制消息可以发送到哪些窗口；例如，当用postMessage传送密码时，这个参数就显得尤为重要，必须保证它的值与这条包含密码的信息的预期接受者的orign属性完全一致，来防止密码被恶意的第三方截获。如果你明确的知道消息应该发送到哪个窗口，那么请始终提供一个有确切值的targetOrigin，而不是*。不提供确切的目标将导致数据泄露到任何对数据感兴趣的恶意站点。</p>
+<p><strong>transfer</strong> 可选</p>
+<p>是一串和message 同时传递的 Transferable 对象. 这些对象的所有权将被转移给消息的接收方，而发送一方将不再保有所有权。</p>
+<h4 id="父窗口监听message"><a href="#父窗口监听message" class="headerlink" title="父窗口监听message"></a>父窗口监听message</h4><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div></pre></td><td class="code"><pre><div class="line">window.addEventListener(&quot;message&quot;, receiveMessage, false);</div><div class="line"></div><div class="line">function receiveMessage(event)</div><div class="line">&#123;</div><div class="line">  // For Chrome, the origin property is in the event.originalEvent</div><div class="line">  // object.</div><div class="line">  var origin = event.origin || event.originalEvent.origin; </div><div class="line">  if (origin !== &quot;http://example.org:8080&quot;)</div><div class="line">    return;</div><div class="line"></div><div class="line">  // ...</div><div class="line">&#125;</div></pre></td></tr></table></figure>
+<p>message 的属性有:</p>
+<p><strong>data</strong></p>
+<p>从其他 window 中传递过来的对象。</p>
+<p><strong>origin</strong></p>
+<p>调用 postMessage  时消息发送方窗口的 origin . 这个字符串由 协议、“://“、域名、“ : 端口号”拼接而成。例如 “<a href="https://example.org" target="_blank" rel="external">https://example.org</a> (implying port 443)”、“<a href="http://example.net" target="_blank" rel="external">http://example.net</a> (implying port 80)”、“<a href="http://example.com:8080”。请注意，这个origin不能保证是该窗口的当前或未来origin，因为postMessage被调用后可能被导航到不同的位置。" target="_blank" rel="external">http://example.com:8080”。请注意，这个origin不能保证是该窗口的当前或未来origin，因为postMessage被调用后可能被导航到不同的位置。</a></p>
+<p><strong>source</strong></p>
+<p>对发送消息的窗口对象的引用; 您可以使用此来在具有不同origin的两个窗口之间建立双向通信。</p>
+<h3 id="实际使用经验"><a href="#实际使用经验" class="headerlink" title="实际使用经验"></a>实际使用经验</h3><ul>
+<li>post高度的时候，一般使用document.body.clientHeight获取iframe内的内容的高度</li>
+<li>为了快速设置高度，可以在未加载完成的时候，就先post一个高度，等页面onload的时候在post一次高度</li>
+<li>注意在页面高度变化的时候需要重新设置高度，页面高度变化一般都是由于发生点击重绘页面，因此点击的时候需要post高度，有时会异步请求一些资源，如果不能在callback中设置高度，可以通过设置定时器不断post高度来解决</li>
+<li>postMessage不仅仅是用来设置高度，可以处理任何消息，不要思维定视</li>
+</ul>
+<h3 id="参考资料"><a href="#参考资料" class="headerlink" title="参考资料"></a>参考资料</h3><p><a href="https://developer.mozilla.org/zh-CN/docs/Web/API/Window/postMessage" target="_blank" rel="external">MDN web docs</a></p>
 
       
     </div>
+    
+    
+    
 
+    
+
+    
+
+    
+
+    <footer class="post-footer">
+      
+        <div class="post-tags">
+          
+            <a href="/tags/js/" rel="tag"># js</a>
+          
+        </div>
+      
+
+      
+      
+      
+
+      
+        <div class="post-nav">
+          <div class="post-nav-next post-nav-item">
+            
+              <a href="/2017/08/17/nginx配置详解/" rel="next" title="nginx配置详解">
+                <i class="fa fa-chevron-left"></i> nginx配置详解
+              </a>
+            
+          </div>
+
+          <span class="post-nav-divider"></span>
+
+          <div class="post-nav-prev post-nav-item">
+            
+          </div>
+        </div>
+      
+
+      
+      
+    </footer>
   </div>
   
   
   
+  </article>
 
-  
+
+
+    <div class="post-spread">
+      
+    </div>
+  </div>
 
 
           </div>
@@ -348,6 +492,10 @@
 
 
           
+  <div class="comments" id="comments">
+    
+  </div>
+
 
         </div>
         
@@ -368,8 +516,17 @@
       
 
       
+        <ul class="sidebar-nav motion-element">
+          <li class="sidebar-nav-toc sidebar-nav-active" data-target="post-toc-wrap" >
+            文章目录
+          </li>
+          <li class="sidebar-nav-overview" data-target="site-overview">
+            站点概览
+          </li>
+        </ul>
+      
 
-      <section class="site-overview sidebar-panel sidebar-panel-active">
+      <section class="site-overview sidebar-panel">
         <div class="site-author motion-element" itemprop="author" itemscope itemtype="http://schema.org/Person">
           <img class="site-author-image" itemprop="image"
                src="/images/avatar.gif"
@@ -431,6 +588,22 @@
 
       </section>
 
+      
+      <!--noindex-->
+        <section class="post-toc-wrap motion-element sidebar-panel sidebar-panel-active">
+          <div class="post-toc">
+
+            
+              
+            
+
+            
+              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-3"><a class="nav-link" href="#实现方案"><span class="nav-number">1.</span> <span class="nav-text">实现方案</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#语法介绍"><span class="nav-number">2.</span> <span class="nav-text">语法介绍</span></a><ol class="nav-child"><li class="nav-item nav-level-4"><a class="nav-link" href="#iframe内使用postMessage"><span class="nav-number">2.1.</span> <span class="nav-text">iframe内使用postMessage</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#父窗口监听message"><span class="nav-number">2.2.</span> <span class="nav-text">父窗口监听message</span></a></li></ol></li><li class="nav-item nav-level-3"><a class="nav-link" href="#实际使用经验"><span class="nav-number">3.</span> <span class="nav-text">实际使用经验</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#参考资料"><span class="nav-number">4.</span> <span class="nav-text">参考资料</span></a></li></ol></div>
+            
+
+          </div>
+        </section>
+      <!--/noindex-->
       
 
       
@@ -550,7 +723,7 @@
   
 
   
-    <script type="text/javascript" src="/js/src/scrollspy.js?v=5.1.2"></script>
+  <script type="text/javascript" src="/js/src/scrollspy.js?v=5.1.2"></script>
 <script type="text/javascript" src="/js/src/post-details.js?v=5.1.2"></script>
 <script async src="//pagead2.googlesyndication.com/pagead/js/adsbygoogle.js"></script>
 <script>
@@ -560,7 +733,7 @@
   });
 </script>
 
-  
+
 
   
 
