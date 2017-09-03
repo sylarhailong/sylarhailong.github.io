@@ -78,7 +78,7 @@
 <link href="/css/main.css?v=5.1.2" rel="stylesheet" type="text/css" />
 
 
-  <meta name="keywords" content="Hexo, NexT" />
+  <meta name="keywords" content="nginx全局变量," />
 
 
 
@@ -94,15 +94,17 @@
 
 
 
-<meta name="description" content="己所不欲，勿施于人">
-<meta property="og:type" content="website">
-<meta property="og:title" content="越老越糊涂">
-<meta property="og:url" content="http://yoursite.com/archives/index.html">
+<meta name="description" content="经常修改nginx配置，修改过之后，下次可能还需要重新查资料，现在总结一下，方便自己以后查看。先总结下nginx的全局变量。 nginx的全局变量参数解释 $arg_PARAMETER      #这个变量包含GET请求中，如果有变量PARAMETER时的值。 $args               #这个变量等于请求行中(GET请求)的参数，例如from=123&amp;amp;test=1; $bi">
+<meta name="keywords" content="nginx全局变量">
+<meta property="og:type" content="article">
+<meta property="og:title" content="nginx全局变量">
+<meta property="og:url" content="http://yoursite.com/2017/09/03/nginx全局变量/index.html">
 <meta property="og:site_name" content="越老越糊涂">
-<meta property="og:description" content="己所不欲，勿施于人">
+<meta property="og:description" content="经常修改nginx配置，修改过之后，下次可能还需要重新查资料，现在总结一下，方便自己以后查看。先总结下nginx的全局变量。 nginx的全局变量参数解释 $arg_PARAMETER      #这个变量包含GET请求中，如果有变量PARAMETER时的值。 $args               #这个变量等于请求行中(GET请求)的参数，例如from=123&amp;amp;test=1; $bi">
+<meta property="og:updated_time" content="2017-09-03T12:57:36.000Z">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:title" content="越老越糊涂">
-<meta name="twitter:description" content="己所不欲，勿施于人">
+<meta name="twitter:title" content="nginx全局变量">
+<meta name="twitter:description" content="经常修改nginx配置，修改过之后，下次可能还需要重新查资料，现在总结一下，方便自己以后查看。先总结下nginx的全局变量。 nginx的全局变量参数解释 $arg_PARAMETER      #这个变量包含GET请求中，如果有变量PARAMETER时的值。 $args               #这个变量等于请求行中(GET请求)的参数，例如from=123&amp;amp;test=1; $bi">
 
 
 
@@ -131,13 +133,13 @@
 
 
 
-  <link rel="canonical" href="http://yoursite.com/archives/"/>
+  <link rel="canonical" href="http://yoursite.com/2017/09/03/nginx全局变量/"/>
 
 
 
 
 
-  <title>归档 | 越老越糊涂</title>
+  <title>nginx全局变量 | 越老越糊涂</title>
   
 
 
@@ -165,7 +167,7 @@
     
   
 
-  <div class="container sidebar-position-left  page-archive  ">
+  <div class="container sidebar-position-left page-post-detail ">
     <div class="headband"></div>
 
     <header id="header" class="header" itemscope itemtype="http://schema.org/WPHeader">
@@ -293,222 +295,203 @@
           <div id="content" class="content">
             
 
-  
-  
-  
-  <div class="post-block archive">
-    <div id="posts" class="posts-collapse">
-      <span class="archive-move-on"></span>
+  <div id="posts" class="posts-expand">
+    
 
-      <span class="archive-page-counter">
+  
+
+  
+  
+  
+
+  <article class="post post-type-normal" itemscope itemtype="http://schema.org/Article">
+  
+  
+  
+  <div class="post-block">
+    <link itemprop="mainEntityOfPage" href="http://yoursite.com/2017/09/03/nginx全局变量/">
+
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="name" content="sylarhailong">
+      <meta itemprop="description" content="">
+      <meta itemprop="image" content="/images/avatar.gif">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="越老越糊涂">
+    </span>
+
+    
+      <header class="post-header">
+
         
         
+          <h1 class="post-title" itemprop="name headline">nginx全局变量</h1>
         
+
+        <div class="post-meta">
+          <span class="post-time">
+            
+              <span class="post-meta-item-icon">
+                <i class="fa fa-calendar-o"></i>
+              </span>
+              
+                <span class="post-meta-item-text">发表于</span>
+              
+              <time title="创建于" itemprop="dateCreated datePublished" datetime="2017-09-03T20:28:07+08:00">
+                2017-09-03
+              </time>
+            
+
+            
+
+            
+          </span>
+
           
-        
-        嗯..! 目前共计 5 篇日志。 继续努力。
-      </span>
+            <span class="post-category" >
+            
+              <span class="post-meta-divider">|</span>
+            
+              <span class="post-meta-item-icon">
+                <i class="fa fa-folder-o"></i>
+              </span>
+              
+                <span class="post-meta-item-text">分类于</span>
+              
+              
+                <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
+                  <a href="/categories/nginx/" itemprop="url" rel="index">
+                    <span itemprop="name">nginx</span>
+                  </a>
+                </span>
 
-      
-
-        
-        
-        
-
-        
+                
+                
+              
+            </span>
           
-          <div class="collection-title">
-            <h2 class="archive-year motion-element" id="archive-year-2017">2017</h2>
-          </div>
-        
-        
 
-        
+          
+            
+          
 
-  <article class="post post-type-normal" itemscope itemtype="http://schema.org/Article">
-    <header class="post-header">
+          
+          
 
-      <h2 class="post-title">
-        
-            <a class="post-title-link" href="/2017/09/03/nginx全局变量/" itemprop="url">
-              
-                <span itemprop="name">nginx全局变量</span>
-              
-            </a>
-        
-      </h2>
+          
 
-      <div class="post-meta">
-        <time class="post-time" itemprop="dateCreated"
-              datetime="2017-09-03T20:28:07+08:00"
-              content="2017-09-03" >
-          09-03
-        </time>
-      </div>
+          
 
-    </header>
-  </article>
+          
 
+        </div>
+      </header>
+    
 
+    
+    
+    
+    <div class="post-body" itemprop="articleBody">
 
       
-
-        
-        
-        
-
-        
-        
-
-        
-
-  <article class="post post-type-normal" itemscope itemtype="http://schema.org/Article">
-    <header class="post-header">
-
-      <h2 class="post-title">
-        
-            <a class="post-title-link" href="/2017/09/03/http中chunked传输协议实际应用/" itemprop="url">
-              
-                <span itemprop="name">http中chunked传输协议实际应用</span>
-              
-            </a>
-        
-      </h2>
-
-      <div class="post-meta">
-        <time class="post-time" itemprop="dateCreated"
-              datetime="2017-09-03T09:18:46+08:00"
-              content="2017-09-03" >
-          09-03
-        </time>
-      </div>
-
-    </header>
-  </article>
-
-
-
       
 
-        
-        
-        
-
-        
-        
-
-        
-
-  <article class="post post-type-normal" itemscope itemtype="http://schema.org/Article">
-    <header class="post-header">
-
-      <h2 class="post-title">
-        
-            <a class="post-title-link" href="/2017/09/02/iframe和父窗口通信/" itemprop="url">
-              
-                <span itemprop="name">iframe和父窗口通信</span>
-              
-            </a>
-        
-      </h2>
-
-      <div class="post-meta">
-        <time class="post-time" itemprop="dateCreated"
-              datetime="2017-09-02T16:28:52+08:00"
-              content="2017-09-02" >
-          09-02
-        </time>
-      </div>
-
-    </header>
-  </article>
-
-
+      
+        <p>经常修改nginx配置，修改过之后，下次可能还需要重新查资料，现在总结一下，方便自己以后查看。先总结下nginx的全局变量。</p>
+<h3 id="nginx的全局变量参数解释"><a href="#nginx的全局变量参数解释" class="headerlink" title="nginx的全局变量参数解释"></a>nginx的全局变量参数解释</h3><ul>
+<li>$arg_PARAMETER      #这个变量包含GET请求中，如果有变量PARAMETER时的值。</li>
+<li>$args               #这个变量等于请求行中(GET请求)的参数，例如from=123&amp;test=1;</li>
+<li>$binary_remote_addr #二进制的客户地址。</li>
+<li>$body_bytes_sent    #响应时送出的body字节数数量。即使连接中断，这个数据也是精确的。</li>
+<li>$content_length     #请求头中的Content-length字段。</li>
+<li>$content_type       #请求头中的Content-Type字段。</li>
+<li>$cookie_COOKIE      #cookie COOKIE变量的值,通过该命令可以取到cookie中的任何字段</li>
+<li>$document_root      #当前请求在root指令中指定的值。</li>
+<li>$document_uri       #与$uri相同。</li>
+<li>$host               #请求主机头字段，否则为服务器名称。</li>
+<li>$hostname           #Set to the machine’s hostname as returned by gethostname</li>
+<li>$is_args            #如果有$args参数，这个变量等于”?”，否则等于””，空值。</li>
+<li>$http_user_agent    #客户端agent信息</li>
+<li>$http_cookie        #客户端cookie信息</li>
+<li>$limit_rate         #这个变量可以限制连接速率。</li>
+<li>$query_string       #与$args相同。</li>
+<li>$request_body_file  #客户端请求主体信息的临时文件名。</li>
+<li>$request_method     #客户端请求的动作，通常为GET或POST。</li>
+<li>$remote_addr        #客户端的IP地址。</li>
+<li>$remote_port        #客户端的端口。</li>
+<li>$http_x_forwarded_for #网络反访问路径，可能包含多个ip</li>
+<li>$remote_user        #已经经过Auth Basic Module验证的用户名。</li>
+<li>$request_completion #如果请求结束，设置为OK. 当请求未结束或如果该请求不是请求链串的最后一个时，为空(Empty)。</li>
+<li>$request_filename   #当前请求的文件路径，由root或alias指令与URI请求生成。</li>
+<li>$request_uri        #包含请求参数的原始URI，不包含主机名，如：”/foo/bar.php?arg=baz”。不能修改。</li>
+<li>$scheme             #HTTP方法（如http，https）。</li>
+<li>$server_protocol    #请求使用的协议，通常是HTTP/1.0或HTTP/1.1。</li>
+<li>$server_addr        #服务器地址，在完成一次系统调用后可以确定这个值。</li>
+<li>$server_name        #服务器名称。</li>
+<li>$server_port        #请求到达服务器的端口号。</li>
+<li>$uri                #不带请求参数的当前URI，$uri不包含主机名，如”/foo/bar.html”。该值有可能和$request_uri 不一致。$request_uri是浏览器发过来的值。该值是rewrite后的值。例如做了internal redirects后。</li>
+</ul>
+<h3 id="参考资料"><a href="#参考资料" class="headerlink" title="参考资料"></a>参考资料</h3><p>如果找不到的全局变量，请参考<a href="http://www.cnblogs.com/AloneSword/archive/2011/12/10/2283483.html" target="_blank" rel="external">nginx全局变量</a></p>
 
       
-
-        
-        
-        
-
-        
-        
-
-        
-
-  <article class="post post-type-normal" itemscope itemtype="http://schema.org/Article">
-    <header class="post-header">
-
-      <h2 class="post-title">
-        
-            <a class="post-title-link" href="/2017/08/17/nginx配置详解/" itemprop="url">
-              
-                <span itemprop="name">nginx配置详解</span>
-              
-            </a>
-        
-      </h2>
-
-      <div class="post-meta">
-        <time class="post-time" itemprop="dateCreated"
-              datetime="2017-08-17T20:15:54+08:00"
-              content="2017-08-17" >
-          08-17
-        </time>
-      </div>
-
-    </header>
-  </article>
-
-
-
-      
-
-        
-        
-        
-
-        
-        
-
-        
-
-  <article class="post post-type-normal" itemscope itemtype="http://schema.org/Article">
-    <header class="post-header">
-
-      <h2 class="post-title">
-        
-            <a class="post-title-link" href="/2017/08/12/window下nodejs版本管理/" itemprop="url">
-              
-                <span itemprop="name">windows环境nodejs版本管理</span>
-              
-            </a>
-        
-      </h2>
-
-      <div class="post-meta">
-        <time class="post-time" itemprop="dateCreated"
-              datetime="2017-08-12T00:00:00+08:00"
-              content="2017-08-12" >
-          08-12
-        </time>
-      </div>
-
-    </header>
-  </article>
-
-
-
-      
-
     </div>
+    
+    
+    
+
+    
+
+    
+
+    
+
+    <footer class="post-footer">
+      
+        <div class="post-tags">
+          
+            <a href="/tags/nginx全局变量/" rel="tag"># nginx全局变量</a>
+          
+        </div>
+      
+
+      
+      
+      
+
+      
+        <div class="post-nav">
+          <div class="post-nav-next post-nav-item">
+            
+              <a href="/2017/09/03/http中chunked传输协议实际应用/" rel="next" title="http中chunked传输协议实际应用">
+                <i class="fa fa-chevron-left"></i> http中chunked传输协议实际应用
+              </a>
+            
+          </div>
+
+          <span class="post-nav-divider"></span>
+
+          <div class="post-nav-prev post-nav-item">
+            
+          </div>
+        </div>
+      
+
+      
+      
+    </footer>
   </div>
   
   
   
+  </article>
 
-  
 
+
+    <div class="post-spread">
+      
+    </div>
+  </div>
 
 
           </div>
@@ -516,6 +499,10 @@
 
 
           
+  <div class="comments" id="comments">
+    
+  </div>
+
 
         </div>
         
@@ -536,8 +523,17 @@
       
 
       
+        <ul class="sidebar-nav motion-element">
+          <li class="sidebar-nav-toc sidebar-nav-active" data-target="post-toc-wrap" >
+            文章目录
+          </li>
+          <li class="sidebar-nav-overview" data-target="site-overview">
+            站点概览
+          </li>
+        </ul>
+      
 
-      <section class="site-overview sidebar-panel sidebar-panel-active">
+      <section class="site-overview sidebar-panel">
         <div class="site-author motion-element" itemprop="author" itemscope itemtype="http://schema.org/Person">
           <img class="site-author-image" itemprop="image"
                src="/images/avatar.gif"
@@ -599,6 +595,22 @@
 
       </section>
 
+      
+      <!--noindex-->
+        <section class="post-toc-wrap motion-element sidebar-panel sidebar-panel-active">
+          <div class="post-toc">
+
+            
+              
+            
+
+            
+              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-3"><a class="nav-link" href="#nginx的全局变量参数解释"><span class="nav-number">1.</span> <span class="nav-text">nginx的全局变量参数解释</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#参考资料"><span class="nav-number">2.</span> <span class="nav-text">参考资料</span></a></li></ol></div>
+            
+
+          </div>
+        </section>
+      <!--/noindex-->
       
 
       
@@ -718,11 +730,16 @@
   
 
   
-  
-    <script type="text/javascript" id="motion.page.archive">
-      $('.archive-year').velocity('transition.slideLeftIn');
-    </script>
-  
+  <script type="text/javascript" src="/js/src/scrollspy.js?v=5.1.2"></script>
+<script type="text/javascript" src="/js/src/post-details.js?v=5.1.2"></script>
+<script async src="//pagead2.googlesyndication.com/pagead/js/adsbygoogle.js"></script>
+<script>
+  (adsbygoogle = window.adsbygoogle || []).push({
+    google_ad_client: "ca-pub-3252802628082163",
+    enable_page_level_ads: true
+  });
+</script>
+
 
 
   
