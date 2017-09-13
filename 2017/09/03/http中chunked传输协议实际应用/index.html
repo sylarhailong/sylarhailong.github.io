@@ -101,7 +101,7 @@
 <meta property="og:url" content="http://yoursite.com/2017/09/03/http中chunked传输协议实际应用/index.html">
 <meta property="og:site_name" content="越老越糊涂">
 <meta property="og:description" content="分块传输编码简介分块传输编码(Chunked transfer encoding)是超文本传输协议（HTTP）中的一种数据传输机制，允许HTTP由网页服务器发送给客户端应用（ 通常是网页浏览器）的数据可以分成多个部分。分块传输编码只在HTTP协议1.1版本（HTTP/1.1）中提供。 通常，HTTP应答消息中发送的数据是整个发送的，Content-Length消息头字段表示数据的长度。数据的长度很">
-<meta property="og:updated_time" content="2017-09-03T07:17:17.000Z">
+<meta property="og:updated_time" content="2017-09-13T03:58:07.000Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="http中chunked传输协议实际应用">
 <meta name="twitter:description" content="分块传输编码简介分块传输编码(Chunked transfer encoding)是超文本传输协议（HTTP）中的一种数据传输机制，允许HTTP由网页服务器发送给客户端应用（ 通常是网页浏览器）的数据可以分成多个部分。分块传输编码只在HTTP协议1.1版本（HTTP/1.1）中提供。 通常，HTTP应答消息中发送的数据是整个发送的，Content-Length消息头字段表示数据的长度。数据的长度很">
@@ -409,13 +409,13 @@
 <h4 id="格式"><a href="#格式" class="headerlink" title="格式"></a>格式</h4><p>如果一个HTTP消息（请求消息或应答消息）的Transfer-Encoding消息头的值为chunked，那么，消息体由数量未定的块组成，并以最后一个大小为0的块为结束。</p>
 <p>每一个非空的块都以该块包含数据的字节数（字节数以十六进制表示）开始，跟随一个CRLF （回车及换行），然后是数据本身，最后块CRLF结束。在一些实现中，块大小和CRLF之间填充有白空格（0x20）。</p>
 <p>最后一块是单行，由块大小（0），一些可选的填充白空格，以及CRLF。最后一块不再包含任何数据，但是可以发送可选的尾部，包括消息头字段。<br>消息最后以CRLF结尾。</p>
-<h3 id="chunked实际应用"><a href="#chunked实际应用" class="headerlink" title="chunked实际应用"></a>chunked实际应用</h3><h4 id="应用背景"><a href="#应用背景" class="headerlink" title="应用背景"></a>应用背景</h4><p>本网站是使用nginx+resin的整体架构，使用java开发</p>
-<h4 id="应用收益"><a href="#应用收益" class="headerlink" title="应用收益"></a>应用收益</h4><p>考虑到分片传输可以分片将页面吐出去，考虑先将html中head的部分吐给浏览器，head部分包含公共的js和css，浏览器收到内容后会请求这些资源，而同时前端web程序会开始执行业务逻辑，达到并行的效果，等web程序运行完成再吐一次数据给浏览器，从而达到减少页面加载时间的效果，提高页面的整体加载速度。</p>
-<h4 id="应用方案"><a href="#应用方案" class="headerlink" title="应用方案"></a>应用方案</h4><ul>
-<li><p>1.运维同学在nginx上配置，支持chunked协议，在nginx 0.7.66版本之后，有一个配置项chunked_transfer_encoding可以开启或者关闭chunk模式，默认是开启的。</p>
+<h3 id="chunked实际应用"><a href="#chunked实际应用" class="headerlink" title="chunked实际应用"></a>chunked实际应用</h3><h4 id="应用背景"><a href="#应用背景" class="headerlink" title="应用背景"></a>应用背景</h4><p>本网站是使用nginx+resin的整体架构，使用java开发</p>
+<h4 id="应用收益"><a href="#应用收益" class="headerlink" title="应用收益"></a>应用收益</h4><p>考虑到分片传输可以分片将页面吐出去，考虑先将html中head的部分吐给浏览器，head部分包含公共的js和css，浏览器收到内容后会请求这些资源，而同时前端web程序会开始执行业务逻辑，达到并行的效果，等web程序运行完成再吐一次数据给浏览器，从而达到减少页面加载时间的效果，提高页面的整体加载速度。</p>
+<h4 id="应用方案"><a href="#应用方案" class="headerlink" title="应用方案"></a>应用方案</h4><ul>
+<li><p>1.运维同学在nginx上配置，支持chunked协议，在nginx 0.7.66版本之后，有一个配置项chunked_transfer_encoding可以开启或者关闭chunk模式，默认是开启的。</p>
   <figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">chunked_transfer_encoding on | off;</div></pre></td></tr></table></figure>
 </li>
-<li><p>2.修改java代码逻辑支持分片发送给浏览器，使用 out.flush();就会将该语句之前的内容发送给浏览器，可以多次使用，在代码的最底部在加上一个，将最后的内容发送出去，每种语言写法不同</p>
+<li><p>2.修改java代码逻辑支持分片发送给浏览器，使用 out.flush();就会将该语句之前的内容发送给浏览器，可以多次使用，在代码的最底部在加上一个，将最后的内容发送出去，每种语言写法不同</p>
 <ul>
 <li>PHP:    ob_flush(); flush();</li>
 <li>perl:   STDOUT-&gt;autoflush(1);</li>
@@ -426,8 +426,8 @@
 </li>
 <li>3.修改代业务逻辑放到&lt; /head&gt;之后，&lt; /head&gt;之后flush因此</li>
 </ul>
-<h4 id="应用踩坑"><a href="#应用踩坑" class="headerlink" title="应用踩坑"></a>应用踩坑</h4><p>由于flush之后，再向response中设置任何东西都会失效，比如在业务逻辑中会有设置cookie的逻辑，要把它放到页面中去设值。需要仔细梳理response中的业务逻辑，避免影响广告收入和统计结果</p>
-<h4 id="应用效果"><a href="#应用效果" class="headerlink" title="应用效果"></a>应用效果</h4><p>经过小流量上线试验后，页面加载时间较少<strong>150ms</strong>，全量上线后，页面加载时间减少<strong>200ms</strong>，效果比较明显</p>
+<h4 id="应用踩坑"><a href="#应用踩坑" class="headerlink" title="应用踩坑"></a>应用踩坑</h4><p>由于flush之后，再向response中设置任何东西都会失效，比如在业务逻辑中会有设置cookie的逻辑，要把它放到页面中去设值。需要仔细梳理response中的业务逻辑，避免影响广告收入和统计结果</p>
+<h4 id="应用效果"><a href="#应用效果" class="headerlink" title="应用效果"></a>应用效果</h4><p>经过小流量上线试验后，页面加载时间较少<strong>150ms</strong>，全量上线后，页面加载时间减少<strong>200ms</strong>，效果比较明显</p>
 <h4 id="应用建议"><a href="#应用建议" class="headerlink" title="应用建议"></a>应用建议</h4><p>如果网站加载时间优化在前端css和js已经优化的没有空间了，可以考虑下这种方案</p>
 <h3 id="参考资料"><a href="#参考资料" class="headerlink" title="参考资料"></a>参考资料</h3><ul>
 <li><a href="https://zh.wikipedia.org/wiki/分块传输编码" target="_blank" rel="external">维基百科</a></li>
@@ -611,7 +611,7 @@
             
 
             
-              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-3"><a class="nav-link" href="#分块传输编码简介"><span class="nav-number">1.</span> <span class="nav-text">分块传输编码简介</span></a><ol class="nav-child"><li class="nav-item nav-level-4"><a class="nav-link" href="#原理"><span class="nav-number">1.1.</span> <span class="nav-text">原理</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#格式"><span class="nav-number">1.2.</span> <span class="nav-text">格式</span></a></li></ol></li><li class="nav-item nav-level-3"><a class="nav-link" href="#chunked实际应用"><span class="nav-number">2.</span> <span class="nav-text">chunked实际应用</span></a><ol class="nav-child"><li class="nav-item nav-level-4"><a class="nav-link" href="#应用背景"><span class="nav-number">2.1.</span> <span class="nav-text">应用背景</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#应用收益"><span class="nav-number">2.2.</span> <span class="nav-text">应用收益</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#应用方案"><span class="nav-number">2.3.</span> <span class="nav-text">应用方案</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#应用踩坑"><span class="nav-number">2.4.</span> <span class="nav-text">应用踩坑</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#应用效果"><span class="nav-number">2.5.</span> <span class="nav-text">应用效果</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#应用建议"><span class="nav-number">2.6.</span> <span class="nav-text">应用建议</span></a></li></ol></li><li class="nav-item nav-level-3"><a class="nav-link" href="#参考资料"><span class="nav-number">3.</span> <span class="nav-text">参考资料</span></a></li></ol></div>
+              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-3"><a class="nav-link" href="#分块传输编码简介"><span class="nav-number">1.</span> <span class="nav-text">分块传输编码简介</span></a><ol class="nav-child"><li class="nav-item nav-level-4"><a class="nav-link" href="#原理"><span class="nav-number">1.1.</span> <span class="nav-text">原理</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#格式"><span class="nav-number">1.2.</span> <span class="nav-text">格式</span></a></li></ol></li><li class="nav-item nav-level-3"><a class="nav-link" href="#chunked实际应用"><span class="nav-number">2.</span> <span class="nav-text">chunked实际应用</span></a><ol class="nav-child"><li class="nav-item nav-level-4"><a class="nav-link" href="#应用背景"><span class="nav-number">2.1.</span> <span class="nav-text">应用背景</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#应用收益"><span class="nav-number">2.2.</span> <span class="nav-text">应用收益</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#应用方案"><span class="nav-number">2.3.</span> <span class="nav-text">应用方案</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#应用踩坑"><span class="nav-number">2.4.</span> <span class="nav-text">应用踩坑</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#应用效果"><span class="nav-number">2.5.</span> <span class="nav-text">应用效果</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#应用建议"><span class="nav-number">2.6.</span> <span class="nav-text">应用建议</span></a></li></ol></li><li class="nav-item nav-level-3"><a class="nav-link" href="#参考资料"><span class="nav-number">3.</span> <span class="nav-text">参考资料</span></a></li></ol></div>
             
 
           </div>
